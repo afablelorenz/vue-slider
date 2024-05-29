@@ -16,8 +16,8 @@
                 <div class="item">
                     <img :src="getImage()" :alt="getTitle()" />
                     <div class="buttonNextPrev">
-                        <button>Previous</button>
-                        <button>Next</button>
+                        <button id="previousBut" @click="previousItem">Previous</button>
+                        <button id="nextBut" @click="nextItem">Next</button>
                     </div>
                     <div class="text">
                         <h3>{{getTitle()}}</h3>

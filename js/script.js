@@ -57,34 +57,28 @@ createApp({
     },
     methods: {
         getTitle: function(){
-            if(this.index>=0 || this.index < 4){
-                return this.arr[this.index].title;
-            }else{
-                return this.arr[0].title;
-            }
-            
+                return this.arr[this.index].title
         },
         getText: function(){
-            if(this.index>=0 || this.index < 4){
-                return this.arr[this.index].text;
-            }else{
-                return this.arr[0].text;
-            };
+                return this.arr[this.index].text
         },
         getImage: function(){
-            if(this.index>=0 || this.index < 4){
-                return this.arr[this.index].image;
-            }else{
-                return this.arr[0].image;
-            };
+                return this.arr[this.index].image
         },
         nextItem: function(){
-            if(this.index >= 0 || this.index < 4){
+            if( this.index < 4){
                 this.index = this.index+1;
             }else{
                 this.index = 0;
             }
-        }        
+        },
+        previousItem: function(){
+            if( this.index > 0){
+                this.index = this.index-1;
+            }else{
+                this.index = 4;
+            }
+        },
     }
 }).mount('#app');
 
